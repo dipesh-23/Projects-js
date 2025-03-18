@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: monospace;
+}
+
+#calculator {
+    width: 360px;
+    background: #2c2c2c;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#input {
+    width: 90%;
+    height: 80px;
+    font-size: 2.2em;
+    text-align: right;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #1e1e1e;
+    color: white;
+    outline: none;
+    text-align: left;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50% !important;
+    font-size: 1.6em;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Special function buttons */
+button:nth-child(1),
+button:nth-child(2) {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Operator buttons */
+button:nth-child(4n) {
+    background: #f39c12;
+    color: white;
+}
+
+/* Number buttons */
+button:not(:nth-child(4n)):not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(1)) {
+    background: #4a4a4a;
+    color: white;
+}
+
+/* Equal button */
+button:nth-last-child(1) {
+    background: #27ae60;
+    color: white;
+}
