@@ -76,3 +76,45 @@ button:nth-last-child(1) {
     background: #27ae60;
     color: white;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #calculator {
+        width: 95%;
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    #input {
+        height: 60px;
+        font-size: 1.8em;
+    }
+
+    #keys {
+        gap: 8px;
+    }
+
+    button {
+        width: 100%;
+        height: 55px;
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 400px) {
+    #calculator {
+        width: 98%;
+        max-width: 300px;
+    }
+
+    #input {
+        height: 55px;
+        font-size: 1.6em;
+        padding: 10px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 1.1em;
+    }
+}
